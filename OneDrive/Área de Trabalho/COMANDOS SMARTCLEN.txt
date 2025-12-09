@@ -1,0 +1,44 @@
+1️⃣ PASSO 1: Abrir e Entrar na Pasta
+Abra o Prompt de Comando (pode procurar por "cmd" no Windows).
+
+Digite este comando para entrar na pasta (as aspas são obrigatórias por causa dos espaços no nome):
+
+DOS
+
+cd "C:\SMARTCLEAN MAIL SE"
+2️⃣ PASSO 2: Rodar o Python (Interface)
+Para mostrar a tradução e a interação com o usuário.
+
+Comando:
+
+DOS
+
+python app.py
+(Se der erro, tente apenas py app.py)
+
+O que fazer:
+
+Quando pedir Pasta, digite: Atualizações
+
+Quando pedir Idade, digite: 400
+
+Quando pedir Anexo, digite: n
+
+3️⃣ PASSO 3: Rodar o Prolog (O Cérebro)
+Para provar a lógica matemática. No CMD, o comando é direto (sem o &).
+
+Comando:
+
+DOS
+
+"C:\Program Files\swipl\bin\swipl.exe" regras.pl
+Atenção: Quando aparecer 1 ?-, digite a consulta abaixo (não esqueça o ponto final):
+
+Prolog
+
+acao(updates, 400, nao, R).
+Para fechar o Prolog:
+
+Prolog
+
+halt.
