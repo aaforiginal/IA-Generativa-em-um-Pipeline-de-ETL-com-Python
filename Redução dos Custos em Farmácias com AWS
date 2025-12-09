@@ -1,0 +1,54 @@
+Relatório de Implementação de Serviços AWS
+Data: 09/12/2025 Empresa: Abstergo Industries Responsável: ANDERSON ACCIOLI FIGUEIREDO
+
+Introdução
+Este relatório apresenta o processo de implementação de ferramentas na empresa Abstergo Industries, realizado por ANDERSON ACCIOLI FIGUEIREDO. O objetivo do projeto foi elencar 3 serviços AWS, com a finalidade de realizar diminuição de custos imediatos, focando em otimizar recursos tipicamente usados em projetos de Data Science e ETL (Extract, Transform, Load).
+
+Descrição do Projeto
+O projeto de implementação de ferramentas foi dividido em 3 etapas, cada uma com seus objetivos específicos:
+
+Etapa 1: Otimização de Computação com Instâncias Spot
+Nome da ferramenta: Amazon EC2 Spot Instances
+
+Foco da ferramenta: Redução de custos em cargas de trabalho de computação tolerantes a falhas.
+
+
+Descrição de caso de uso: Utilizar Instâncias Spot do Amazon EC2 para executar pipelines de ETL (Extract, Transform, Load) não críticos ou modelos de Machine Learning (como o que pode ser construído com Scikit-Learn ) que podem ser interrompidos e reiniciados. As Spot Instances permitem economia de até 90% nos custos de computação em comparação com instâncias On-Demand. Isso é ideal para a etapa de Transformação de grandes volumes de dados antes de serem carregados no Data Warehouse.
+
+
+
+
+
+Etapa 2: Otimização de Armazenamento com S3 Intelligent-Tiering
+Nome da ferramenta: Amazon S3 Intelligent-Tiering
+
+Foco da ferramenta: Otimização automática dos custos de armazenamento de dados brutos e resultados de ETL.
+
+
+Descrição de caso de uso: Configurar o Amazon S3 Intelligent-Tiering como a classe de armazenamento padrão para o Data Lake (ambiente de dados brutos), onde dados de diversas fontes são extraídos. Este serviço move automaticamente os dados entre camadas de acesso frequente e infrequente, dependendo do padrão de uso, sem impactar o desempenho. Isso garante que os dados de ETL que são acessados menos vezes, mas mantidos para conformidade ou re-treinamento de modelos, gerem o menor custo possível.
+
+
+Etapa 3: Gerenciamento de Custos e Alertas
+Nome da ferramenta: AWS Budgets e AWS Cost Explorer
+
+Foco da ferramenta: Visibilidade, monitoramento e controle proativo dos gastos na nuvem.
+
+Descrição de caso de uso: Utilizar o AWS Cost Explorer para analisar o histórico de gastos e identificar padrões, e o AWS Budgets para criar alertas. O objetivo é configurar orçamentos com alertas (via e-mail ou SNS) que disparam quando os gastos com os serviços (EC2 e S3, por exemplo) excedem um limite predefinido ou previsto. Isso fornece um mecanismo de controle para garantir que as novas implementações de ETL e ML em Python (usando Pandas ou Scikit-Learn ) não gerem surpresas orçamentárias.
+
+
+
+Conclusão
+A implementação de ferramentas na empresa Abstergo Industries tem como esperado a redução imediata dos custos com computação e armazenamento, além de maior visibilidade e governança financeira. A utilização de Instâncias Spot, S3 Intelligent-Tiering e AWS Budgets/Cost Explorer aumentará a eficiência e a produtividade, ao mesmo tempo que assegura a otimização dos recursos. Recomenda-se a continuidade da utilização das ferramentas implementadas e a busca por novas tecnologias que possam melhorar ainda mais os processos da empresa.
+
+Anexos
+Documentação de Casos de Uso e Arquitetura para Pipelines de ETL (Extrato, Transformação, Carga).
+
+
+Scripts em Python com Pandas para manipulação de dados na camada de Transformação.
+
+
+Relatórios mensais de economia gerada pelas Instâncias Spot e S3 Intelligent-Tiering.
+
+Assinatura do Responsável pelo Projeto:
+
+ANDERSON ACCIOLI FIGUEIREDO
